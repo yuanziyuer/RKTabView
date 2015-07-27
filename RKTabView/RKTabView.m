@@ -211,7 +211,7 @@
     CGFloat width  = [self tabItemWidth];
     CGFloat height = [self tabItemHeight];
     CGFloat x = self.horizontalInsets.left + [self indexOfTab:tabItem] * width;
-    return CGRectMake(x, 0, width, height);
+    return CGRectMake(x, 5, width, height);
 }
 
 - (void)setTabContent:(UIControl *)tab withTabItem:(RKTabItem *)tabItem {
@@ -324,7 +324,7 @@
             [tab addTarget:self action:@selector(pressedTab:) forControlEvents:UIControlEventTouchUpInside];
             
             //Add darker background view if necessary
-            UIView *darkerBackgroundView = [[UIView alloc] initWithFrame:tab.bounds];
+            UIView *darkerBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tab.bounds.size.width-10, tab.bounds.size.height)];
             darkerBackgroundView.userInteractionEnabled = NO;
             darkerBackgroundView.tag = DARKER_BACKGROUND_VIEW_TAG;
             darkerBackgroundView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
