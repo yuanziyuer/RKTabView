@@ -149,7 +149,7 @@
         case TabTypeUsual:
             //Exclude excludable items. Send delegate invocation.
             //Tab can we switched only if it's disabled. It can't be switched off by pressing on itself.
-            if (tabItem.tabState == TabStateDisabled) {
+//            if (tabItem.tabState == TabStateDisabled) {
                 //Switch it on.
                 [tabItem switchState];
                 //Switch down other excludable items.
@@ -165,7 +165,7 @@
                         [self.delegate tabView:self tabBecameEnabledAtIndex:[self indexOfTab:tabItem] tab:tabItem];
                     }
                 }
-            }
+//            }
             [self setTabContent:tabItem];
             break;
     }
