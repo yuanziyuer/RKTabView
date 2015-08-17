@@ -155,7 +155,7 @@
                 //Switch down other excludable items.
                 for (RKTabItem *item in self.tabItems) {
                     if (item != tabItem && item.tabType == TabTypeUsual) {
-                        item.tabState = TabStateDisabled;
+//                        item.tabState = TabStateDisabled;
                         [self setTabContent:item];
                     }
                 }
